@@ -123,11 +123,13 @@
 		br loop_menu1
 
 	menu2:
-		movia r14, lcd_clear # Limpa o display antes de escrever
+		# Limpa o display antes de escrever
+		movia r14, lcd_clear
 		custom 0, r15, r14, r14
 		call delay
 
-		movia r14, 0x232	# Número 2 na LCD com RS em 1 e RW em 0 (1000110010)
+		# Número 2 na LCD com RS em 1 e RW em 0 (1000110010)
+		movia r14, 0x232
 		custom 0, r15, r14, r14
 		call delay
 
@@ -159,11 +161,13 @@
 		br loop_menu2
 
   menu3:
-		movia r14, lcd_clear # Limpa o display antes de escrever
+		# Limpa o display antes de escrever
+		movia r14, lcd_clear
 		custom 0, r15, r14, r14
 		call delay
 
-		movia r14, 0x233	# Número 3 na LCD com RS em 1 e RW em 0 (1000110011)
+		# Número 3 na LCD com RS em 1 e RW em 0 (1000110011)
+		movia r14, 0x233
 		custom 0, r15, r14, r14
 		call delay
 
@@ -195,11 +199,13 @@
 		br loop_menu3
 
 	menu4:
-		movia r14, lcd_clear # Limpa o display antes de escrever
+		# Limpa o display antes de escrever
+		movia r14, lcd_clear
 		custom 0, r15, r14, r14
 		call delay
 
-		movia r14, 0x234	# Número 4 na LCD com RS em 1 e RW em 0 (1000110100)
+		# Número 4 na LCD com RS em 1 e RW em 0 (1000110100)
+		movia r14, 0x234
 		custom 0, r15, r14, r14
 		call delay
 
@@ -231,11 +237,13 @@
 		br loop_menu4
 
 	menu5:
-		movia r14, lcd_clear # Limpa o display antes de escrever
+		# Limpa o display antes de escrever
+		movia r14, lcd_clear
 		custom 0, r15, r14, r14
 		call delay
 
-		movia r14, 0x235	# Número 5 na LCD com RS em 1 e RW em 0 (1000110101)
+		# Número 5 na LCD com RS em 1 e RW em 0 (1000110101)
+		movia r14, 0x235
 		custom 0, r15, r14, r14
 		call delay
 
