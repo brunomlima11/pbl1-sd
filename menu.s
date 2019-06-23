@@ -1,13 +1,12 @@
 .data
-	# Variáveis para controle dos botões. Aqui estão todas como iguais por conta
-	# de como o JNiosEmu funciona, mas deixei separadas para facilitar o port para
-	# a FPGA
+	# Variáveis com endereços de memória dos botões
 	up_addr: .word 0x2070
 	down_addr: .word 0x2090
 	sel_addr: .word 0x2080
 	back_addr: .word 0x2060
 
-	# Variável para controle dos LEDs. Vetor de 5 posições com cada uma delas representando um LED
+	# Variável com o endereço de memória de controle dos LEDs.
+	# Vetor de 5 posições com cada uma delas representando um LED
 	led_addr: .word 0x20B0 // Necessário mandar um número representando a combinação
 												 // em binário dos LEDS utilizando a lógica invertida (0- on, 1- off)
 												 // ex: Dec: 10 -> 01010 (acende os LEDs 1, 3 e 5)
@@ -82,7 +81,7 @@
 		custom 0, r15, r13, r13
 		call delay
 
-		#
+		# Fim da inicialização da LCD. Branch para o início do código do menu
 		br menu1
 
 	menu1: // Label para escrever o conteúdo da LCD (chamada apenas 1 vez por estado)
